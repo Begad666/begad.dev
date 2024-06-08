@@ -59,6 +59,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@cloudflare/workers-types@npm:^4.20231121.0":
+  version: 4.20240605.0
+  resolution: "@cloudflare/workers-types@npm:4.20240605.0"
+  checksum: 10c0/ad7e2d1f3155be559bb2ec67d32198b071c514c4bbd9ea0a0340645ade57304d70f71530b208cbed49e18e4a8e2491072d762e01af8709b4e286f3fb0d29f178
+  languageName: node
+  linkType: hard
+
 "@cspotcode/source-map-support@npm:0.8.1":
   version: 0.8.1
   resolution: "@cspotcode/source-map-support@npm:0.8.1"
@@ -761,6 +768,20 @@ __metadata:
   peerDependencies:
     "@sveltejs/kit": ^2.0.0
   checksum: 10c0/30f27cd6a2fc2e4495a691155eaee1a8b094c70d0a18978c581985c3c22d947f28f362f04fce7aa63c8682075f8a674d1c331a2efd8d9e1d284bc9cc2efdc180
+  languageName: node
+  linkType: hard
+
+"@sveltejs/adapter-cloudflare@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "@sveltejs/adapter-cloudflare@npm:4.4.0"
+  dependencies:
+    "@cloudflare/workers-types": "npm:^4.20231121.0"
+    esbuild: "npm:^0.20.2"
+    worktop: "npm:0.8.0-next.18"
+  peerDependencies:
+    "@sveltejs/kit": ^2.0.0
+    wrangler: ^3.28.4
+  checksum: 10c0/dd0668a681207c231771514fb619c32f49672a3d629b9f12957bcaf09d6de9714a02e7fe63487ec38b6abaa3f0c313667bb8b63fbee6ab113aae24a0312f42a9
   languageName: node
   linkType: hard
 
@@ -1680,7 +1701,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.20.1":
+"esbuild@npm:^0.20.1, esbuild@npm:^0.20.2":
   version: 0.20.2
   resolution: "esbuild@npm:0.20.2"
   dependencies:
@@ -3203,6 +3224,7 @@ __metadata:
   dependencies:
     "@playwright/test": "npm:^1.28.1"
     "@sveltejs/adapter-auto": "npm:^3.0.0"
+    "@sveltejs/adapter-cloudflare": "npm:^4.4.0"
     "@sveltejs/kit": "npm:^2.0.0"
     "@sveltejs/vite-plugin-svelte": "npm:^3.0.0"
     "@types/eslint": "npm:^8.56.7"
@@ -3424,6 +3446,13 @@ __metadata:
   dependencies:
     picomatch: "npm:^2.2.1"
   checksum: 10c0/6fa848cf63d1b82ab4e985f4cf72bd55b7dcfd8e0a376905804e48c3634b7e749170940ba77b32804d5fe93b3cc521aa95a8d7e7d725f830da6d93f3669ce66b
+  languageName: node
+  linkType: hard
+
+"regexparam@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "regexparam@npm:3.0.0"
+  checksum: 10c0/a6430d7b97d5a7d5518f37a850b6b73aab479029d02f46af4fa0e8e4a1d7aad05b7a0d2d10c86ded21a14d5f0fa4c68525f873a5fca2efeefcccd93c36627459
   languageName: node
   linkType: hard
 
@@ -4394,6 +4423,16 @@ __metadata:
   bin:
     workerd: bin/workerd
   checksum: 10c0/78fe6f82191f2333d367da910be8d30f1871da4b99cf5ee9967cf12bf50967460cf4ceb2589a54b5d02ae8bd2e23d222e41ee61334aa4c666081f55573e5d07b
+  languageName: node
+  linkType: hard
+
+"worktop@npm:0.8.0-next.18":
+  version: 0.8.0-next.18
+  resolution: "worktop@npm:0.8.0-next.18"
+  dependencies:
+    mrmime: "npm:^2.0.0"
+    regexparam: "npm:^3.0.0"
+  checksum: 10c0/b15e9efd140dcaa158fc59316ae4f174489b8f4b03d92db68aa1a3282fc60d47d4e2376411136647f5c12aa0dc25d4a0f1b23725ac483ca39046789edd3e2395
   languageName: node
   linkType: hard
 
