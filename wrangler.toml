@@ -1,6 +1,0 @@
-name = "begad"
-pages_build_output_dir = ".svelte-kit/cloudflare"
-compatibility_date = "2024-06-08"
-
-[env.production]
-compatibility_date = "2024-06-08"
