@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Turnstile } from "svelte-turnstile";
 	import { env } from "$env/dynamic/public";
-	import type { ActionData } from "./$types";
+	import type { ActionData, Snapshot } from "./$types";
 
 	let allowSubmit = false;
 
@@ -14,6 +14,15 @@
 	}
 
 	export let form: ActionData;
+
+	let email = form?.email ?? "";
+
+	let message = form?.message ? `${form?.message}` : "";
+
+	export const snapshot: Snapshot<{ email: string; message: string }> = {
+		capture: () => ({ email, message }),
+		restore: (value) => ({ email, message } = value)
+	};
 </script>
 
 <svelte:head>
@@ -39,7 +48,7 @@
 				id="email"
 				type="email"
 				class="bg-transparent mt-1 outline-none border-b rounded-t-lg border-zinc-600 active:border-zinc-500 focus:border-zinc-500 bg-zinc-800 active:bg-zinc-700 focus:bg-zinc-700 transition-colors text-zinc-300 p-1"
-				value={form?.email ?? ""}
+				bind:value={email}
 			/>
 		</div>
 		<div class="relative flex flex-col mt-2">
@@ -49,7 +58,7 @@
 				name="message"
 				id="message"
 				class="bg-transparent mt-1 outline-none border-b rounded-t-lg border-zinc-600 active:border-zinc-500 focus:border-zinc-500 bg-zinc-800 active:bg-zinc-700 focus:bg-zinc-700 transition-colors text-zinc-300 p-1"
-				value={form?.message ? `${form?.message}` : ""}
+				bind:value={message}
 			/>
 			<span class="text-xs text-zinc-500 font-semibold">max. 500 characters</span>
 		</div>
