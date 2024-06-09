@@ -15,6 +15,18 @@ database_name = "begad.dev"
 database_id = "764cf25c-f74e-4894-8fb6-7a948778d459"
 preview_database_id = "DB"
 
+[[d1_databases]]
+binding = "DB_prev"
+database_name = "begad.dev-preview"
+database_id = "ebc8f70d-ed4e-4ef7-9d86-068ca99ab031"
+preview_database_id = "DB_prev"
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "begad.dev"
+database_id = "764cf25c-f74e-4894-8fb6-7a948778d459"
+preview_database_id = "DB"
+
 [[env.preview.d1_databases]]
 binding = "DB"
 database_name = "begad.dev-preview"
