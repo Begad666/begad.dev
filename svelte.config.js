@@ -1,5 +1,6 @@
 import adapter from "@sveltejs/adapter-cloudflare";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+import { execSync } from "node:child_process";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -21,7 +22,11 @@ const config = {
 				experimentalJsonConfig: false,
 				persist: true
 			}
-		})
+		}),
+		version: {
+			name: execSync("git rev-parse HEAD").toString().trim(),
+			pollInterval: 60 * 1000 // 60 seconds
+		}
 	}
 };
 
