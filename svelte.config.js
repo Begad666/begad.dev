@@ -11,7 +11,16 @@ const config = {
 		adapter: adapter({
 			routes: {
 				include: ["/*"],
-				exclude: ["<all>"]
+				// TODO: make issue for the configuration option for "_app/env.js" file in sveltekit
+				// exclude: ["<all>"]
+				exclude: [
+					"/_app/assets/*",
+					"/_app/chunks/*",
+					"/_app/entry/*",
+					"/_app/nodes/*",
+					"<files>",
+					"<prerendered>"
+				]
 			},
 			platformProxy: {
 				configPath: "wrangler.toml",
