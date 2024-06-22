@@ -13,14 +13,7 @@ const config = {
 				include: ["/*"],
 				// TODO: make issue for the configuration option for "_app/env.js" file in sveltekit
 				// exclude: ["<all>"]
-				exclude: [
-					"/_app/assets/*",
-					"/_app/chunks/*",
-					"/_app/entry/*",
-					"/_app/nodes/*",
-					"<files>",
-					"<prerendered>"
-				]
+				exclude: ["/_app/immutable/*", "/_app/version.json", "<files>", "<prerendered>"]
 			},
 			platformProxy: {
 				configPath: "wrangler.toml",
