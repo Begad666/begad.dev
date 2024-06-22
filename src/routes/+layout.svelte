@@ -8,10 +8,6 @@
 	import Footer from "$lib/components/Footer.svelte";
 </script>
 
-<svelte:head>
-	<title>begad's cool website</title>
-</svelte:head>
-
 <div class="relative flex flex-col items-center h-full">
 	<Header />
 	<main class="w-full flex-grow"><slot /></main>

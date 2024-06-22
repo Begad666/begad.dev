@@ -1,5 +1,6 @@
 <svelte:head>
-	<title>begad's projects</title>
+	<title>begad's cool website - begad's projects</title>
+	<meta name="description" content="A list of my projects." />
 </svelte:head>
 
 <div>

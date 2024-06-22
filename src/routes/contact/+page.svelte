@@ -26,7 +26,8 @@
 </script>
 
 <svelte:head>
-	<title>contact begad</title>
+	<title>begad's cool website - contact me</title>
+	<meta name="description" content="Contact information for me, begad!" />
 </svelte:head>
 
 <div class="p-6 flex flex-col">
