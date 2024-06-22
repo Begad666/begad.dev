@@ -29,9 +29,9 @@ export async function GET() {
 			xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
 			xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
 		>
-			${createElement("/", new Date())}
-			${createElement("/contact", new Date())}
-			${createElement("/projects", new Date())}
+			${createElement("/", new Date(2023, 5, 22))}
+			${createElement("/contact", new Date(2023, 5, 22))}
+			${createElement("/projects", new Date(2023, 5, 22))}
 		</urlset>`.trim(),
 		{
 			headers: {
