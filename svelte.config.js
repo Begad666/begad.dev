@@ -26,6 +26,9 @@ const config = {
 		version: {
 			name: execSync("git rev-parse HEAD").toString().trim(),
 			pollInterval: 60 * 1000 // 60 seconds
+		},
+		env: {
+			publicModule: "random.js"
 		}
 	}
 };
